@@ -1,0 +1,214 @@
+$content_width: 930px;
+.siteHeader{
+  background-color: #1A1C18;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  .siteHeaderInner{
+    background-color: #414141;
+    border-bottom: 1px solid #FFF;
+    .siteHeader__content{
+      width: $content_width;
+      background: image_url('header-bg-icon.gif') no-repeat center left / 59px 89px;
+      padding: 18px 0 18px 67px;
+      margin: 0 auto;
+      dl{
+        dt{
+          margin-bottom: 10px;
+        }
+        dd{
+          font-size: 1.2rem;
+          color: #B2B2B2;
+        }
+      }
+    }
+  }
+}
+.siteFooter{
+  .siteFooterInner{
+    width: $content_width;
+    border-top: 1px solid #E0E0E0;
+    padding: 6px 0;
+    margin: 0 auto;
+    address{
+      font-style: normal;
+      color: #868686;
+    }
+  }
+}
+.layout-siteContent{
+  width: $content_width;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  .layout-siteContent__main{
+    width: 660px;
+    float: right;
+  }
+  .layout-siteContent__sub{
+    width: 250px;
+    float: left;
+  }
+}
+.bannerBlock--position__sub{
+  margin-bottom: 15px;
+}
+.brandList--position__sub{
+  .brandList__title{
+    margin-bottom: 5px;
+    img{
+      display: block;
+    }
+  }
+  .brandList__content{
+    ul{
+      margin-bottom: 20px;
+      li{
+        border-bottom: 1px solid #EBEBEB;
+        padding: 3px 0;
+        margin-bottom: 3px;
+        a{
+          display: table;
+          width: 100%;
+          color: inherit;
+          text-decoration: none;
+          span{
+            &.icon, &.name{
+              display: table-cell;
+              vertical-align: middle;
+            }
+            &.icon{
+              width: 55px;
+            }
+            &.name{
+              line-height: 1.5;
+            }
+            .en{
+              font-size: 1.6em;
+              &:after{
+                content: '\A';
+                white-space: pre;
+              }
+            }
+            .ja{
+              font-size: 10px;
+              color: #878787;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.brandList--position__main{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  .brandList__brand{
+    width: 124px;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    a{
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      img{
+        display: block;
+        margin-bottom: 5px;
+      }
+      span.en{
+        &:after{
+          content: '\A';
+          white-space: pre;
+        }
+      }
+    }
+  }
+}
+.wearGuide{
+  .wearGuide__title{
+    margin-bottom: 5px;
+    img{
+      display: block;
+    }
+  }
+  .wearGuide__content{
+    ul{
+      list-style: none;
+      padding: 0 10px;
+      margin-bottom: 20px;
+      li{
+        font-size: 1.4rem;
+        border-bottom: 1px dotted #EBEBEB;
+        a{
+          display: block;
+          color: #333;
+          text-decoration: none;
+          background: image_url('icon01.gif') no-repeat center left / 11px 11px;
+          padding: 15px 0 15px 20px;
+        }
+      }
+    }
+  }
+}
+.conpareWears{
+  .conpareWears__title{
+    border-bottom: 2px solid #EBEBEB;
+    margin-bottom: 13px;
+    h1{
+      font-size: 24px;
+      color: #333;
+      padding-bottom: 13px;
+    }
+  }
+}
+.otherArticles{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &:nth-child(3){
+    display: none;
+  }
+  dl{
+    width: 325px;
+    box-sizing: border-box;
+    border: 1px solid #CCC;
+    padding: 7px 13px;
+    margin-bottom: 10px;
+    @for $num from 1 through 5{
+      @if $num == 3{
+        &:nth-child(#{$num}){
+          display: none;
+        }
+      }
+      @else{
+        &:nth-child(#{$num}){
+          dd{
+            background-image: image_url('bg_0#{$num}.gif');
+          }
+        }
+      }
+    }
+    dt{
+      font-size: 18px;
+      color: #333;
+      border-bottom: 1px dotted #CCC;
+      padding: 6px 0;
+    }
+    dd{
+      font-size: 1.4rem;
+      line-height: 1.5;
+      background-repeat: no-repeat;
+      background-position: top 10px right;
+      background-size: 90px 90px;
+      padding: 10px 110px 10px 0;
+      a{
+        display: block;
+        background: image_url('icon01.gif') no-repeat center left / 11px 11px;
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

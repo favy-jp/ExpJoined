@@ -1,0 +1,61 @@
+= render 'partials/arrays'
+%header.siteHeader
+  .siteHeaderInner
+    .siteHeader__content
+      %dl
+        %dt= image_tag 'header-logo.gif', alt: 'トレーニングウェア比較', size: '292x30'
+        %dd ジムやスポーツシーンに活躍するトレーニングウェア、フィットネスウェアを紹介
+
+%article.layout-siteContent
+  .layout-siteContent__main
+    .imageSliders#js-bxSlider
+      - @sliders.each.with_index(1) do | alt, index |
+        .imageSliders__silide
+          = link_to image_tag("top-bn0#{index}.jpg", alt: alt, size: "660x200"), ""
+    .conpareWears
+      .conpareWears__title
+        %h1 トレーニングウェア比較
+      .conpareWears__content
+        .brandList--position__main
+          - @brands.each do | brand |
+            .brandList__brand
+              = link_to '' do
+                = image_tag "img_main_#{brand[2]}_s.gif", alt: brand[0], size: "124x80"
+                %span.en= brand[0]
+                %span.ja= brand[1]
+        .otherArticles
+          - @guides.each.each.with_index(1) do | guide, index |
+            %dl.article
+              %dt= guide[0]
+              %dd
+                = guide[1]
+                = link_to '続きを見る', guide[2]
+    .bannerBlock--position__main
+      = image_tag 'img_banner.jpg'
+  .layout-siteContent__sub
+    .bannerBlock--position__sub
+      = image_tag 'left-bn.gif'
+    .brandList--position__sub
+      .brandList__title
+        %h2= image_tag 'left-wear.gif', alt: 'トレーニングウェア', size: '250x30'
+      .brandList__content
+        %ul
+          - @brands.each do | brand |
+            %li
+              = link_to '' do
+                %span.icon
+                  = image_tag "left-nemu-#{brand[2]}.gif", alt: brand[0], size: "40x40"
+                %span.name
+                  %span.en= brand[0]
+                  %span.ja= brand[1]
+    .wearGuide
+      .wearGuide__title
+        %h2= image_tag 'left-wear-guide.gif', alt: 'トレーニングウェアガイド', size: '250x30'
+      .wearGuide__content
+        %ul
+          - @guides.each do | guide |
+            %li= link_to guide[0], guide[2]
+
+%footer.siteFooter
+  .siteFooterInner
+    %address Copyright(C) #{Time.now.year} Venex Co.Ltd All rights reserved.
