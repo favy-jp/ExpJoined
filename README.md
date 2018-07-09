@@ -1,6 +1,6 @@
 # README
 ##　環境情報
-* rbenv : １．１．１
+* rbenv : 1.1.1
 * ruby : 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin16]
 * rails : 5.1.6
 
