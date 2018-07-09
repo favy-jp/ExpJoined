@@ -4,6 +4,10 @@
 * ruby : 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin16]
 * rails : 5.1.6
 
+##　追加プラグイン等
+* jQuery2.2.4
+* bxSlider 4.2.1(https://bxslider.com/)
+* reset CSS : HTML Doctor(http://html5doctor.com/html-5-reset-stylesheet/)
 
 ##　配布ファイルの変更点
 * img_main_unuder_s.gif　=> img_main_under_s.gif（タイポ）
