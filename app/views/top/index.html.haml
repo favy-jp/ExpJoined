@@ -12,11 +12,11 @@
       - @sliders.each.with_index(1) do | alt, index |
         .imageSliders__silide
           = link_to image_tag("top-bn0#{index}.jpg", alt: alt, size: "660x200"), ""
-    .conpareWears
-      .conpareWears__title
+    .compareWears
+      .compareWears__title
         %h1 トレーニングウェア比較
-      .conpareWears__content
-        .brandList--position__main
+      .compareWears__content
+        .brandList--position__main#js-flexElementCompletion
           - @brands.each do | brand |
             .brandList__brand
               = link_to '' do
@@ -57,5 +57,5 @@
             %li= link_to guide[0], guide[2]
 
 %footer.siteFooter
-  .siteFooterInner
+  .siteFooter__content
     %address Copyright(C) #{Time.now.year} Venex Co.Ltd All rights reserved.

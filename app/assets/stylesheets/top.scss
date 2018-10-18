@@ -1,54 +1,5 @@
 $content_width: 930px;
-.siteHeader{
-  background-color: #1A1C18;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-  .siteHeaderInner{
-    background-color: #414141;
-    border-bottom: 1px solid #FFF;
-    .siteHeader__content{
-      width: $content_width;
-      background: image_url('header-bg-icon.gif') no-repeat center left / 59px 89px;
-      padding: 18px 0 18px 67px;
-      margin: 0 auto;
-      dl{
-        dt{
-          margin-bottom: 10px;
-        }
-        dd{
-          font-size: 1.2rem;
-          color: #B2B2B2;
-        }
-      }
-    }
-  }
-}
-.siteFooter{
-  .siteFooterInner{
-    width: $content_width;
-    border-top: 1px solid #E0E0E0;
-    padding: 6px 0;
-    margin: 0 auto;
-    address{
-      font-style: normal;
-      color: #868686;
-    }
-  }
-}
-.layout-siteContent{
-  width: $content_width;
-  padding-bottom: 100px;
-  margin: 0 auto;
-  overflow: hidden;
-  .layout-siteContent__main{
-    width: 660px;
-    float: right;
-  }
-  .layout-siteContent__sub{
-    width: 250px;
-    float: left;
-  }
-}
+
 .bannerBlock--position__sub{
   margin-bottom: 15px;
 }
@@ -63,6 +14,7 @@ $content_width: 930px;
     ul{
       margin-bottom: 20px;
       li{
+        list-style: none;
         border-bottom: 1px solid #EBEBEB;
         padding: 3px 0;
         margin-bottom: 3px;
@@ -127,13 +79,13 @@ $content_width: 930px;
   }
 }
 .wearGuide{
-  .wearGuide__title{
+  &__title{
     margin-bottom: 5px;
     img{
       display: block;
     }
   }
-  .wearGuide__content{
+  &__content{
     ul{
       list-style: none;
       padding: 0 10px;
@@ -152,8 +104,8 @@ $content_width: 930px;
     }
   }
 }
-.conpareWears{
-  .conpareWears__title{
+.compareWears{
+  &__title{
     border-bottom: 2px solid #EBEBEB;
     margin-bottom: 13px;
     h1{

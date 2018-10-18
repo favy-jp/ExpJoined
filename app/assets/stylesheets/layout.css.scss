@@ -1,0 +1,17 @@
+$content_width: 930px;
+.layout-siteContent{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: $content_width;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  &__main{
+    width: 660px;
+    order: 2;
+  }
+  &__sub{
+    width: 250px;
+    order: 1;
+  }
+}

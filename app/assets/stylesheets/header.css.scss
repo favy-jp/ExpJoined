@@ -1,0 +1,26 @@
+$content_width: 930px;
+
+.siteHeader{
+  background-color: #1A1C18;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  &__content{
+    width: $content_width;
+    background: image_url('header-bg-icon.gif') no-repeat center left / 59px 89px;
+    padding: 18px 0 18px 67px;
+    margin: 0 auto;
+    dl{
+      dt{
+        margin-bottom: 10px;
+      }
+      dd{
+        font-size: 1.2rem;
+        color: #B2B2B2;
+      }
+    }
+  }
+  .siteHeaderInner{
+    background-color: #414141;
+    border-bottom: 1px solid #FFF;
+  }
+}
